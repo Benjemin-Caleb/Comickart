@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Login and Signup Form</title>
+
+    <link rel="stylesheet" href="login.css">
+            
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+
+    <style>
+        body {
+            background-image: url('https://i.redd.it/oi4xhuzaita41.jpg');
+            backdrop-filter: blur(5px);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+                    
+</head>
+<body>
+
+    <section class="container forms">
+        <div class="form login">
+            <div class="form-content">
+                <header>Login</header>
+                <!-- Login Form -->
+                <form action="index.html" method="post">
+                    <div class="field input-field">
+                        <input type="email" placeholder="Email" class="input">
+                    </div>
+
+                    <div class="field input-field">
+                        <input type="password" placeholder="Password" class="password">
+                        <i class='bx bx-hide eye-icon'></i>
+                    </div>
+
+                    <div class="form-link">
+                        <a href="#" class="forgot-pass">Forgot password?</a>
+                    </div>
+
+                    <!-- Submit button inside the form -->
+                    <div class="field button-field">
+                        <button type="submit">Login</button>
+                    </div>
+                </form>
+
+                <div class="form-link">
+                    <span>Don't have an account? <a href="signup.html" class="link signup-link">Signup</a></span>
+                </div>
+            </div>
+
+            <div class="line"></div>
+
+            <div class="media-options">
+                <a href="#" class="field facebook">
+                    <i class='bx bxl-facebook facebook-icon'></i>
+                    <span>Login with Facebook</span>
+                </a>
+            </div>
+
+            <div class="media-options">
+                <a href="#" class="field google">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Google_%22G%22_logo.svg/1024px-Google_%22G%22_logo.svg.png" alt="" class="google-img">
+                    <span>Login with Google</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- JavaScript -->
+    <script src="TCS.js"></script>
+</body>
+</html>

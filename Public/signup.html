@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <title>Responsive Registration Form | CodingLab</title>
+    <link rel="stylesheet" href="signup.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+<body>
+  <div class="container">
+    <div class="title">Registration</div>
+    <div class="content">
+      <form id="registrationForm" action="#">
+        <div class="user-details">
+          <div class="input-box">
+            <span class="details">Full Name</span>
+            <input type="text" id="fullName" placeholder="Enter your name" required>
+          </div>
+          <div class="input-box">
+            <span class="details">Username</span>
+            <input type="text" id="username" placeholder="Enter your username" required>
+          </div>
+          <div class="input-box">
+            <span class="details">Email</span>
+            <input type="email" id="email" placeholder="Enter your email" required>
+          </div>
+          <div class="input-box">
+            <span class="details">Phone Number</span>
+            <input type="tel" id="phoneNumber" placeholder="Enter your number" required>
+          </div>
+          <div class="input-box">
+            <span class="details">Password</span>
+            <input type="password" id="password" placeholder="Enter your password" required>
+          </div>
+          <div class="input-box">
+            <span class="details">Confirm Password</span>
+            <input type="password" id="confirmPassword" placeholder="Confirm your password" required>
+          </div>
+        </div>
+        <div class="gender-details">
+          <span class="gender-title">Gender</span>
+          <div class="category">
+            <label>
+              <input type="radio" name="gender" value="Male" required>
+              <span class="gender">Male</span>
+            </label>
+            <label>
+              <input type="radio" name="gender" value="Female" required>
+              <span class="gender">Female</span>
+            </label>
+            <label>
+              <input type="radio" name="gender" value="Prefer not to say" required>
+              <span class="gender">Prefer not to say</span>
+            </label>
+          </div>
+        </div>
+        <div class="button">
+          <input type="submit" value="Register">
+        </div>
+        <span>Already have an account? <a href="login.html" class="link signup-link">Login</a></span>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById('registrationForm').addEventListener('submit', function(event) {
+      var fullName = document.getElementById('fullName').value;
+      var username = document.getElementById('username').value;
+      var email = document.getElementById('email').value;
+      var phoneNumber = document.getElementById('phoneNumber').value;
+      var password = document.getElementById('password').value;
+      var confirmPassword = document.getElementById('confirmPassword').value;
+      var gender = document.querySelector('input[name="gender"]:checked');
+
+      if (!fullName || !username || !email || !phoneNumber || !password || !confirmPassword || !gender) {
+        alert('Please fill in all fields.');
+        event.preventDefault();
+        return;
+      }
+
+      if (password !== confirmPassword) {
+        alert('Passwords do not match.');
+        event.preventDefault();
+        return;
+      }
+    });
+  </script>
+
+</body>
+</html>
